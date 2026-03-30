@@ -46,16 +46,18 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="text-center md:text-left">
               <span className="inline-block px-3 py-1 bg-white/5 border border-white/10 text-orange-400 rounded-full text-xs font-bold mb-6 tracking-widest uppercase">
-                Software Engineer
+                Software Engineer → SoftWare Generalist
               </span>
               <h2 className="text-5xl md:text-7xl font-black mb-8 leading-tight tracking-tight text-white">
-                トレンドを<br />
+                Accelerating the&nbsp;
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-purple-500">
-                  キャッチアップ。
+                  Edge
                 </span>
               </h2>
               <p className="text-lg text-slate-400 font-medium max-w-lg leading-relaxed">
-                AWSを活用したスケーラブルなインフラ構築から、Javaによるバックエンド実装まで実績があります。
+                『UX-Obsessedなテクノロジーで現場~最先端を加速させる』を軸に活動しています。
+                個人開発でのAWSを活用したスケーラブルなインフラ構築から、現場でのJavaによるバックエンドまで実装、
+                横断的な学びでSoftware Generalistとして成長し貢献します。
               </p>
             </div>
 
@@ -79,8 +81,22 @@ export default function Home() {
         <div className="flex justify-between items-end mb-12 px-2">
           <h3 className="text-3xl font-black text-white">Featured Projects</h3>
         </div>
-
-        <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <ProjectCard
+            color="blue"
+            title="Tabemo AI (tabemo.net)"
+            subTitle="Next.js × AWS Fullstack"
+            cardTitle="AI-Powered Recipe & Menu Planner"
+            description="Gemini API を活用した次世代レシピ生成・献立管理サービス。ドメイン運用（tabemo.net）から、認証・DB・インフラの自動化までを統合。"
+            tags={['Next.js', 'AWS CDK', 'Cognito', 'DynamoDB', 'Lambda']}
+            points={[
+              'AWS CDK による Infrastructure as Code (IaC) の実現',
+              'Amazon Cognito を活用したセキュアなユーザー認証基盤',
+              'API Gateway + Lambda + DynamoDB によるサーバーレスAPI',
+              'Gemini API による動的なレシピ生成ロジックの実装'
+            ]}
+            href="https://tabemo.net/"
+          />
           <ProjectCard
             color="orange"
             title="[作成中]  KinaCo AI Chat App"
@@ -91,7 +107,6 @@ export default function Home() {
             points={['Converse API によるマルチモデル対応', 'API Gateway + Lambda の CORS 回避実装', '実運用を想定した IAM Role の詳細設計']}
             href={GITHUB_URL_KINACO}
           />
-
           <ProjectCard
             color="purple"
             title="Modern Portfolio"
@@ -119,6 +134,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
       </main>
 
       {/* Contact Section */}
